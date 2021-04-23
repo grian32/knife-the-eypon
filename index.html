@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+     <title>Knife the Epyon!</title>
+     <link rel="icon" href="epyon.png">
+</head>
+<body>
+     Press K to knife the epyon! <br>
+     <img src="knife.png" id="knife"></img><img src="epyon.png" style="position:fixed;left:75px;"></img>
+     <audio id="stabaudio" src="stab.mp3"></audio>
+     <script defer>
+	  document.getElementsByTagName("html")[0].addEventListener("keydown", (key) => {
+	      if (key.code === "KeyK") {
+                  document.getElementById("knife").style="margin-left:20px;";
+		  document.getElementById("stabaudio").play();
+		  setTimeout(() => {document.getElementById("knife").style=""}, 2000);
+              }
+          })
+     </script>
+</body>
+</html>
